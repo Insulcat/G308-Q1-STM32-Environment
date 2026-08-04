@@ -1,19 +1,44 @@
-# STM32F103C8T6 现代开发环境工程
+# G308 / ROBOCON 电控组考核
 
-G308电控组考核第一题：现代开发环境配置。
+- 姓名：王永祺
+- 学号：2025111454
+- 专业：电气工程及其自动化
+- 主控：STM32F103C8T6
 
-## 开发环境
+本仓库保存 G308 电控组考核第一题和第二题的工程及提交材料。
 
-- MCU：STM32F103C8T6
-- 开发工具：Visual Studio Code
-- 配置工具：STM32CubeMX
-- 固件库：STM32Cube FW_F1 V1.8.7
-- 构建系统：CMake + Ninja
-- 编译器：GNU Arm Embedded GCC
-- 代码框架：STM32 HAL
+## 项目结构
 
-## 工程说明
+### 第一题：STM32 现代开发环境
 
-本工程使用STM32CubeMX完成引脚和时钟配置，并生成CMake工程，随后在Visual Studio Code中完成配置和编译。
+仓库根目录中的 `Core/`、`Drivers/`、`cmake/`、`F103_LED_Blink.ioc` 等文件属于第一题工程。
 
-当前工程已通过Debug构建，成功生成可执行文件。
+主要开发环境：
+
+- Visual Studio Code
+- STM32CubeMX
+- STM32Cube FW_F1 V1.8.7
+- CMake + Ninja
+- GNU Arm Embedded GCC
+- STM32 HAL
+
+第一题完成了 STM32F103C8T6 工程生成、现代 CMake 构建环境配置及 LED 程序验证。
+
+### 第二题：VOFA+ 上位机与舵机控制
+
+第二题全部材料位于 [`Q2-Servo-VOFA/`](./Q2-Servo-VOFA/)：
+
+| 提交要求 | 仓库位置 | 内容 |
+|---|---|---|
+| 项目文件 | [`firmware/`](./Q2-Servo-VOFA/firmware/) | STM32CubeMX/CMake 完整工程 |
+| 开发过程简要说明 | [`docs/`](./Q2-Servo-VOFA/docs/) | 接线、协议、测试和故障排查说明 |
+| 实操视频 | [`video/`](./Q2-Servo-VOFA/video/) | VOFA+ 与 SG90 实机演示 |
+
+第二题实现了：
+
+- VOFA+ 通过 CP2102 和 USART1 下发目标角度。
+- TIM2_CH1（PA0）输出 50 Hz PWM 控制 SG90 舵机。
+- STM32 通过 JustFloat 回传程序控制角度和 PWM 占空比。
+- `A45`、`A90`、`A135` 测试均能使舵机到达对应位置并稳定保持。
+
+详细命令、接线和测试结果请查看[第二题说明](./Q2-Servo-VOFA/README.md)。
