@@ -5,7 +5,7 @@
 - 专业：电气工程及其自动化
 - 主控：STM32F103C8T6
 
-本仓库保存 G308 电控组考核第一题、第二题和第三题的工程及提交材料。
+本仓库保存 G308 电控组考核第一题、第二题、第三题和第四题的工程及提交材料。
 
 ## 项目结构
 
@@ -56,3 +56,18 @@
 第三题实现了：主机按键发送 `0x11`；从机收到后回复 `0x22` 并翻转 LED；主机通过 USART1/CP2102 在 VOFA+ RawData 中打印收发结果。
 
 详细配置、接线和测试结果请查看[第三题说明](./Q3-CAN/README.md)。
+
+### 第四题：FreeRTOS 电机 PID 控制
+
+第四题全部材料位于 [`Q4-Fan-PID/`](./Q4-Fan-PID/)：
+
+| 提交要求 | 仓库位置 | 内容 |
+|---|---|---|
+| 项目文件 | [`firmware/`](./Q4-Fan-PID/firmware/) | STM32CubeMX/CMake/HAL/FreeRTOS 完整源码工程 |
+| 开发过程简要说明 | [`docs/development.md`](./Q4-Fan-PID/docs/development.md) | 系统设计、PID 参数、接线、数据通道和验证记录 |
+| 实操视频 | [`video/`](./Q4-Fan-PID/video/) | 速度控制与位置控制实机演示 |
+| VOFA+ 截图 | [`docs/`](./Q4-Fan-PID/docs/) | 速度和位置模式的完整曲线截图 |
+
+第四题实现了 ADC 电位器设定、编码器反馈、TB6612FNG 电机驱动、速度/位置 PID、FreeRTOS 双任务和 VOFA+ JustFloat 实时绘图。
+
+详细配置、接线和测试结果请查看[第四题说明](./Q4-Fan-PID/README.md)。
