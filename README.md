@@ -7,6 +7,9 @@
 
 本仓库保存 G308 电控组考核第一题至第五题的工程及提交材料。
 
+> 提交前总核验结果、逐题材料对应关系、编译记录和已知说明见
+> [`SUBMISSION_CHECKLIST.md`](./SUBMISSION_CHECKLIST.md)。
+
 ## 项目结构
 
 ### 第一题：STM32 现代开发环境
@@ -31,7 +34,7 @@
 | 提交要求 | 仓库位置 | 内容 |
 |---|---|---|
 | 项目文件 | [`firmware/`](./Q2-Servo-VOFA/firmware/) | STM32CubeMX/CMake 完整工程 |
-| 开发过程简要说明 | [`docs/`](./Q2-Servo-VOFA/docs/) | 接线、协议、测试和故障排查说明 |
+| 开发文档 | [`docs/`](./Q2-Servo-VOFA/docs/) | 接线、协议、测试和故障排查说明 |
 | 实操视频 | [`video/`](./Q2-Servo-VOFA/video/) | VOFA+ 与 SG90 实机演示 |
 
 第二题实现了：
