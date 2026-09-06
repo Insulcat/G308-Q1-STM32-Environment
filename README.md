@@ -5,7 +5,11 @@
 - 专业：电气工程及其自动化
 - 主控：STM32F103C8T6
 
-本仓库保存 G308 电控组考核第一题至第五题的工程及提交材料。
+本仓库当前提交分支包含软件第一至第五题、硬件第一及第二题材料。
+
+**最终材料核查与已知差异：[FINAL_SUBMISSION_REVIEW.md](./FINAL_SUBMISSION_REVIEW.md)。**
+
+硬件题入口：[第一题最小系统板](./Hardware/Q1-STM32-Minimum-System/README.md) · [第二题24V转5V](./Hardware/Q2-24V-5V-Buck/README.md)。
 
 > 提交前总核验结果、逐题材料对应关系、编译记录和已知说明见
 > [`SUBMISSION_CHECKLIST.md`](./SUBMISSION_CHECKLIST.md)。
@@ -96,3 +100,8 @@
 ### 硬件第一题：STM32 最小系统板
 
 [图纸与说明](./Hardware/Q1-STM32-Minimum-System/README.md)：包含原理图 PDF/PNG、PCB 六页 PDF 及顶层、底层突出显示的彩色 PNG。此目录为硬件题材料，与根目录的软件第一题区分。
+
+
+### 硬件第二题：24V转5V降压模块
+
+[图纸与设计说明](./Hardware/Q2-24V-5V-Buck/README.md)：三方案对比、原理图PDF/PNG、PCB PDF及顶底面PNG。
